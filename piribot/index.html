@@ -8,6 +8,7 @@
 </head>
 <body class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700 text-white font-sans">
   <main class="min-h-screen flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden text-center">
+    
     <!-- アイコン -->
     <div class="w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg z-10">
       <img src="icon.png" alt="PiriBotアイコン" class="object-cover w-full h-full" />
@@ -21,19 +22,27 @@
 
     <!-- カードグリッド（2列） -->
     <div class="grid gap-6 sm:grid-cols-2 max-w-3xl w-full mb-6">
-      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
+      
+      <!-- 匿名投票 -->
+      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-lg transition ease-in-out transform duration-300 hover:scale-[1.03] hover:shadow-2xl border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
         <h2 class="text-xl font-semibold mb-2 text-indigo-300">🗳️ 匿名投票</h2>
         <p class="text-sm text-gray-200">誰が投票したか分からない安心仕様。意見集めやイベントに最適！</p>
       </div>
-      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
+
+      <!-- ランダムタイムアウト -->
+      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-lg transition ease-in-out transform duration-300 hover:scale-[1.03] hover:shadow-2xl border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
         <h2 class="text-xl font-semibold mb-2 text-pink-300">🎲 ランダムタイムアウト</h2>
         <p class="text-sm text-gray-200">参加者からランダムに1人が一時退場！？サーバーにスリルと笑いを。</p>
       </div>
-      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
+
+      <!-- メッセージ暗号化 -->
+      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-lg transition ease-in-out transform duration-300 hover:scale-[1.03] hover:shadow-2xl border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
         <h2 class="text-xl font-semibold mb-2 text-green-300">🔐 メッセージ暗号化</h2>
         <p class="text-sm text-gray-200">秘密の会話やちょっとした遊びに使える暗号化・復号化コマンド。</p>
       </div>
-      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
+
+      <!-- Make it a Quote 風画像 -->
+      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-lg transition ease-in-out transform duration-300 hover:scale-[1.03] hover:shadow-2xl border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
         <h2 class="text-xl font-semibold mb-2 text-yellow-300">🖼️ Make it a Quote 風画像</h2>
         <p class="text-sm text-gray-200">メッセージを引用風におしゃれな画像で生成。SNS映えにも◎</p>
       </div>
@@ -41,13 +50,13 @@
 
     <!-- 埋め込み作成（中央1列） -->
     <div class="max-w-md w-full mb-10">
-      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
+      <div class="bg-slate-700 bg-opacity-90 rounded-2xl p-6 shadow-lg transition ease-in-out transform duration-300 hover:scale-[1.03] hover:shadow-2xl border border-gray-600 ring-1 ring-blue-500/30 shadow-blue-900/50">
         <h2 class="text-xl font-semibold mb-2 text-blue-300">🧩 埋め込み作成</h2>
         <p class="text-sm text-gray-200">コマンドから装飾付きの埋め込みメッセージを簡単に作成。告知やルール説明などに活躍！</p>
       </div>
     </div>
 
-    <!-- ボタン -->
+    <!-- Bot導入ボタン -->
     <button name="invite-button" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full text-lg transition">
       🚀 Botを導入する
     </button>
