@@ -56,6 +56,23 @@
       </div>
     </div>
 
+<!-- ステータスカード（横並び・角丸・影つき・フォント強調） -->
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-10">
+  <div class="bg-slate-800 bg-opacity-80 rounded-xl px-6 py-5 text-center shadow-lg border border-slate-600 w-64">
+    <p class="text-base sm:text-lg text-gray-300 font-semibold">📡 総導入サーバー数</p>
+    <p id="instserv" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">取得中...</p>
+  </div>
+  <div class="bg-slate-800 bg-opacity-80 rounded-xl px-6 py-5 text-center shadow-lg border border-slate-600 w-64">
+    <p class="text-base sm:text-lg text-gray-300 font-semibold">📶 Ping値</p>
+    <p id="ping" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">取得中...</p>
+  </div>
+  <div class="bg-slate-800 bg-opacity-80 rounded-xl px-6 py-5 text-center shadow-lg border border-slate-600 w-64">
+    <p class="text-base sm:text-lg text-gray-300 font-semibold">👥 総ユーザー数</p>
+    <p id="totalmem" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">取得中...</p>
+  </div>
+</div>
+
+
     <!-- Bot導入ボタン -->
     <button name="invite-button" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full text-lg transition transform duration-300 hover:-rotate-3 hover:scale-105">
       🚀 Botを導入する
@@ -76,6 +93,21 @@
           '_blank'
         );
       });
+
+      // ステータス情報の取得
+      fetch('https://kr279x5g-3000.asse.devtunnels.ms/status')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('instserv').textContent = data.instserv;
+          document.getElementById('ping').textContent = data.ping;
+          document.getElementById('totalmem').textContent = data.totalmem;
+        })
+        .catch(error => {
+          console.error('ステータス情報の取得に失敗しました:', error);
+          document.getElementById('instserv').textContent = '取得失敗';
+          document.getElementById('ping').textContent = '取得失敗';
+          document.getElementById('totalmem').textContent = '取得失敗';
+        });
     });
   </script>
 </body>
